@@ -6,13 +6,18 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "css-loader": "^3.5.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "svg-inline-loader": "^0.8.2",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "webpack --mode production",
+    "watch": "webpack-dev-server --mode=development",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
