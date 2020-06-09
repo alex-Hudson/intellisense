@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 
 export default class Table extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.setState({ data: this.parseData(this.props.data) });
   }
@@ -32,15 +28,19 @@ export default class Table extends Component {
 
   render() {
     return (
-      <div className={"temp-cdfgdlassName"}>
-        {this.state?.data.map((row) => {
-          return (
-            <tr>
-              <td>{row.key}</td>
-              <td>{row.value}</td>
-            </tr>
-          );
-        })}
+      <div className={"table-container"}>
+        <table id="students">
+          <tbody>
+            {this.state?.data.map((row) => {
+              return (
+                <tr key={row.key}>
+                  <td>{row.key}</td>
+                  <td>{row.value}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     );
   }

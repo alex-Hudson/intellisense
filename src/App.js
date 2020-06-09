@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Graph from "./Graph";
 import Table from "./Table";
@@ -10,7 +9,6 @@ const BASE_URL = "https://reference.intellisense.io/thickenernn/v1/referencia";
 export default class App extends Component {
   async componentDidMount() {
     const data = await this.getData();
-    console.log("changing state");
     this.setState({ graphData: data });
   }
 
@@ -25,7 +23,6 @@ export default class App extends Component {
   };
 
   render() {
-    console.log(this.state);
     if (!this.state) return null;
     return (
       <div className="App">
